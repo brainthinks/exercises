@@ -2,8 +2,10 @@
 
 set -Eeuo pipefail
 
+source "./scripts/utils.sh"
+
 echo "Removing existing build directory"
-rm -rf build
+rm -rf "${BUILD_DIR}"
 
 echo "Compiling..."
 javac @argfile
